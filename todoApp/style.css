@@ -1,0 +1,143 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgba(59, 92, 33, 0.2);
+    font-family: Poppins;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+#top-title{
+    color: rgb(89, 144, 7);
+     font-size: 2.5rem;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     margin: 10px 1px 15px 1px ;
+}
+#top-title span{
+  color: rgb(178, 89, 89);
+}
+.container{
+    background-color: #f6f5f5ef;
+    height: 35vw;
+    width: 45vw;
+    border-radius: 10px;
+    padding: 20px;
+}
+.title2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+#para{
+    margin-bottom: 10px;
+}
+
+.progress-bar{
+    height: 25px;
+    background-color: rgb(220, 240, 220);
+    border-radius: 15px;
+}
+.progress-value{
+    height: 100%;
+    width: 60%;
+    background-color:  rgb(132, 208, 19);
+    border-radius: 15px;
+    visibility: hidden;
+}
+#goal-note{
+     color: red;
+     visibility: hidden;
+     margin-bottom: 20px;
+}
+.goals-container{
+    border: 2px solid rgba(138, 136, 136, 0.392);
+    background-color: rgba(255, 254, 254, 0.967);
+    border-radius: 8px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+
+}
+.goal-checkbox{
+    width: 22px;
+    height: 22px;
+    display: flex;
+    border: 2px solid rgba(138, 136, 136, 0.392);
+    border-radius: 50%;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.goal-input{
+    font-family: inherit ;
+    flex-grow: 1;
+    margin-left: 10px;
+    align-self: stretch;
+    padding: 3px;
+    font-weight: 600;
+    outline: none;
+    border: navajowhite;
+    background-color: rgba(255, 254, 254, 0.967);
+}
+
+.completed .goal-checkbox {
+    background:   #48A300;;
+    border-color:  rgb(89, 144, 7);
+    display: flex;
+    align-items: center;
+    
+
+    
+}
+
+
+.completed .goal-input{
+    color: #48A300;
+    text-decoration: line-through;
+
+    
+}
+
+
+
+
+
+#madeBy{
+    color: rgba(89, 89, 89, 0.967);
+    margin-top: 30px;
+    font-weight: 500;
+}
+@media screen and (max-width: 700px) {
+    .container {
+        min-width: 250px;
+        min-height: 500px;
+    }
+    #para {
+        font-size: 10px;
+    }
+    #top-title{
+        font-size: 1.8rem;
+    }
+    .progress-bar{
+        height: 15px;
+    }
+    .goals-container{
+        height: 35px;
+        margin-bottom: 30px;
+    }
+    .goal-checkbox{
+        width: 15px;
+        height: 15px;
+    }
+}

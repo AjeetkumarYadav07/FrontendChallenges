@@ -1,0 +1,82 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(3, 3, 3);
+    color: whitesmoke;
+    --color-black: rgb(61, 61, 61);
+    --color-yellow: rgb(251, 251, 66);
+}
+
+.card {
+    width: 100%;
+    max-width: 340px;
+    height: 570px;
+    position: fixed;
+    border-radius: 15px;
+    margin: auto;
+    background-color: var(--color-black);
+    inset: 0;
+    padding: 1rem;
+}
+
+.top img {
+    border-radius: 50%;
+
+}
+
+.top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.top span {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgb(239, 239, 16);
+}
+
+
+
+.bottom {
+    margin-top: 2rem;
+}
+
+.links {
+    list-style: none;
+    row-gap: 1rem;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    /* align-items: center; */
+
+}
+
+.links li {
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+    padding: 10px;
+    background-color: rgb(75, 75, 75);
+    width: 100%;
+    text-decoration: none;
+    font-weight: 600;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+
+.links_btn a {
+    list-style: none;
+    color: white;
+    text-decoration: none;
+    cursor: help;
+}
+
+.links li:hover {
+    background-color: yellow;
+    border-radius: 15px;
+}

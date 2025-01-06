@@ -1,0 +1,13 @@
+.square{
+    background-color: black;
+    border:15px solid blue;
+    height: 300px;
+    width: 300px;
+}
+
+@media print{
+    .square{
+        background-color: palevioletred;
+        border: 20px saddlebrown solid;
+    }
+}
