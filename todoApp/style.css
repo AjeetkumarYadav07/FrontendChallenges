@@ -49,8 +49,8 @@ main{
 }
 .progress-value{
     height: 100%;
-    width: 60%;
-    background-color:  rgb(132, 208, 19);
+    width: 100%;
+    background-color:  rgb(60, 100, 0);
     border-radius: 15px;
     visibility: hidden;
 }
