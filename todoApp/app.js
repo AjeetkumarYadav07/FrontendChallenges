@@ -61,7 +61,7 @@ inputField.forEach((filed) => {
         CheckBox.addEventListener("click", (e) => {
           if (ErorNotice()) {
             CheckBox.parentElement.classList.add("completed");
-           
+            progressValue.style.visibility = "visible";
           }
         });
       });
