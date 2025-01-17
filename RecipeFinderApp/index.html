@@ -1,85 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>HamBuger</title>
+    <title>Recipe-Finder</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
     <header>
         <div class="logo">
             <img src="https://tse4.mm.bing.net/th?id=OIP.2rmEYxf4l7V97jXhJEO2BwHaHa&pid=Api&P=0&h=180" alt="logo">
         </div>
-     
+
         <div id="theme">
-            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 20 20"><path fill="#000" d="M10 3.5a6.5 6.5 0 1 1 0 13zM10 2a8 8 0 1 0 0 16a8 8 0 0 0 0-16"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 20 20">
+                <path fill="#000" d="M10 3.5a6.5 6.5 0 1 1 0 13zM10 2a8 8 0 1 0 0 16a8 8 0 0 0 0-16" />
+            </svg>
         </div>
         <nav id="top">
             <div class="hambuger-menu" id="toggle">
                 <span class="hambuger-icon">&#9776 </span>
-             </div> 
-          <ul class="nav-container">
-           
-            <a href="#top-picks">Top Picks</a>
-            <a href="#whopper">Whopper</a>
-            <a href="#stunner-menu">Stunner Menu</a>
-            <a href="#new-foodie">New Foodie Collection</a>
-            <a href="#deal-of-day"> Deal of  the Day</a>
-          </ul>  
-          
-          
+            </div>
+            <ul class="nav-container">
+
+                <a href="#top-picks">Top Picks</a>
+                <a href="#myRecipe">Recipe's</a>
+                <a href="#most-visit">Most visit</a>
+                <a href="#best"> Best of Year</a>
+                <a href="#contact"> Contact Us</a>
+            </ul>
+
+
         </nav>
 
-        
+
     </header>
 
     <main>
-         <section class="main-section">
-            
-        <img src="https://foodie-hamburger.netlify.app/images/hero-image.png" alt=""></img-container>
-         </section>
+        <section class="main-section" id="top-picks">
 
-         <p id="qute"> Well , You can't resit anymore!</p>
-     
-         <section >
-            <div class="section" id="top-picks" >
-                  <h2 id="food-name">Top-picks</h2>
-                  <img src="https://images.pexels.com/photos/11975887/pexels-photo-11975887.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
-                  <button id="nameof-receipe">name</button>
-            </div>
-            <div class="section" id="whopper" >
-                  <h2>Whopper</h2>
-                  <img src="https://images.pexels.com/photos/10695966/pexels-photo-10695966.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+            <img src="https://foodie-hamburger.netlify.app/images/hero-image.png" alt=""></img-container>
+        </section>
 
+        <p id="qute"> Please Click on Button For Find the Food Recipe's</p>
+        <button id="myRecipe" class="load-More"> Load Recipe's </button>
+
+        <section id="menu">
+
+            <div class="section" >
+                <h2>Top Food</h2>
+                <img id="food-img-1" src=" " alt="">
+                <h3 id="food-name-1"> </h3>
+                <a id="food-recipe-1" href="" target="_blank">Go for Recipe</a> <br> <br>
+                <a class="Tutorial" id="recipe-tutorial-1" href="" target="_blank"> Recipe Tutorial <svg xmlns="http://www.w3.org/2000/svg" width="14.23" height="10" viewBox="0 0 256 180"><path fill="#f00" d="M250.346 28.075A32.18 32.18 0 0 0 227.69 5.418C207.824 0 127.87 0 127.87 0S47.912.164 28.046 5.582A32.18 32.18 0 0 0 5.39 28.24c-6.009 35.298-8.34 89.084.165 122.97a32.18 32.18 0 0 0 22.656 22.657c19.866 5.418 99.822 5.418 99.822 5.418s79.955 0 99.82-5.418a32.18 32.18 0 0 0 22.657-22.657c6.338-35.348 8.291-89.1-.164-123.134"/><path fill="#fff" d="m102.421 128.06l66.328-38.418l-66.328-38.418z"/></svg></a>
             </div>
-            <div class="section"  id="stunner-menu">
-                  <h2>Stunner Menu</h2>
-                   <img src="https://images.pexels.com/photos/1213710/pexels-photo-1213710.jpeg" alt="food">
+            <div class="section" id="top-picks">
+                <h2>Top Food</h2>
+                <img id="food-img-2" src=" " alt="">
+                <h3 id="food-name-2"> </h3>
+                <a id="food-recipe-2" href="" target="_blank">Go for Recipe</a>  <br> <br>
+                <a class="Tutorial" id="recipe-tutorial-1=2" href="" target="_blank"> Recipe Tutorial <svg xmlns="http://www.w3.org/2000/svg" width="14.23" height="10" viewBox="0 0 256 180"><path fill="#f00" d="M250.346 28.075A32.18 32.18 0 0 0 227.69 5.418C207.824 0 127.87 0 127.87 0S47.912.164 28.046 5.582A32.18 32.18 0 0 0 5.39 28.24c-6.009 35.298-8.34 89.084.165 122.97a32.18 32.18 0 0 0 22.656 22.657c19.866 5.418 99.822 5.418 99.822 5.418s79.955 0 99.82-5.418a32.18 32.18 0 0 0 22.657-22.657c6.338-35.348 8.291-89.1-.164-123.134"/><path fill="#fff" d="m102.421 128.06l66.328-38.418l-66.328-38.418z"/></svg></a>
             </div>
-            <div class="section" id="new-foodie" >
-                  <h2>New Foddie Collection</h2>
-                  <img src="https://images.pexels.com/photos/27254878/pexels-photo-27254878/free-photo-of-vegan-curry-masala.jpeg" alt="">
+            <div class="section" id="top-picks">
+                <h2>Most visit</h2>
+                <img id="food-img-3" src=" " alt="">
+                <h3 id="food-name-3"> </h3>
+                <a id="food-recipe-3" href="" target="_blank" >Go for Recipe</a> <br> <br>
+                <a  class="Tutorial" id="recipe-tutorial-3" href="" target="_blank"> Recipe Tutorial <svg xmlns="http://www.w3.org/2000/svg" width="14.23" height="10" viewBox="0 0 256 180"><path fill="#f00" d="M250.346 28.075A32.18 32.18 0 0 0 227.69 5.418C207.824 0 127.87 0 127.87 0S47.912.164 28.046 5.582A32.18 32.18 0 0 0 5.39 28.24c-6.009 35.298-8.34 89.084.165 122.97a32.18 32.18 0 0 0 22.656 22.657c19.866 5.418 99.822 5.418 99.822 5.418s79.955 0 99.82-5.418a32.18 32.18 0 0 0 22.657-22.657c6.338-35.348 8.291-89.1-.164-123.134"/><path fill="#fff" d="m102.421 128.06l66.328-38.418l-66.328-38.418z"/></svg></a>
             </div>
-            <div class="section" id="deal-of-day" >
-                  <h2>New Foddie Collection</h2>
-                  <img src="https://images.pexels.com/photos/769969/pexels-photo-769969.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+            <div class="section" id="most-visit">
+                <h2>Most visit</h2>
+                <img id="food-img-4" src=" " alt="">
+                <h3 id="food-name-4"> </h3>
+                <a id="food-recipe-4" href="" target="_blank" >Go for Recipe</a>  <br> <br>
+                <a class="Tutorial" id="recipe-tutorial-4" href="" target="_blank"> Recipe Tutorial <svg xmlns="http://www.w3.org/2000/svg" width="14.23" height="10" viewBox="0 0 256 180"><path fill="#f00" d="M250.346 28.075A32.18 32.18 0 0 0 227.69 5.418C207.824 0 127.87 0 127.87 0S47.912.164 28.046 5.582A32.18 32.18 0 0 0 5.39 28.24c-6.009 35.298-8.34 89.084.165 122.97a32.18 32.18 0 0 0 22.656 22.657c19.866 5.418 99.822 5.418 99.822 5.418s79.955 0 99.82-5.418a32.18 32.18 0 0 0 22.657-22.657c6.338-35.348 8.291-89.1-.164-123.134"/><path fill="#fff" d="m102.421 128.06l66.328-38.418l-66.328-38.418z"/></svg></a>
+            </div>
+            <div class="section" id="most-visit">
+                <h2> Most visit</h2>
+                <img id="food-img-5" src=" " alt="">
+                <h3 id="food-name-5"> </h3>
+                <a id="food-recipe-5" href="" target="_blank" >Go for Recipe</a>   <br> <br>
+                <a class="Tutorial" id="recipe-tutorial-5" href="" target="_blank"> Recipe Tutorial <svg xmlns="http://www.w3.org/2000/svg" width="14.23" height="10" viewBox="0 0 256 180"><path fill="#f00" d="M250.346 28.075A32.18 32.18 0 0 0 227.69 5.418C207.824 0 127.87 0 127.87 0S47.912.164 28.046 5.582A32.18 32.18 0 0 0 5.39 28.24c-6.009 35.298-8.34 89.084.165 122.97a32.18 32.18 0 0 0 22.656 22.657c19.866 5.418 99.822 5.418 99.822 5.418s79.955 0 99.82-5.418a32.18 32.18 0 0 0 22.657-22.657c6.338-35.348 8.291-89.1-.164-123.134"/><path fill="#fff" d="m102.421 128.06l66.328-38.418l-66.328-38.418z"/></svg></a>
+            </div>
+            <div class="section" id="best">
+                <h2>Best of the Year</h2>
+                <img id="food-img-6" src=" " alt="">
+                <h3 id="food-name-6"> </h3>
+                <a id="food-recipe-6" href="" target="_blank" >Go for Recipe</a>   <br> <br>
+                <a class="Tutorial" id="recipe-tutorial-6" href="" target="_blank"> Recipe Tutorial <svg xmlns="http://www.w3.org/2000/svg" width="14.23" height="10" viewBox="0 0 256 180"><path fill="#f00" d="M250.346 28.075A32.18 32.18 0 0 0 227.69 5.418C207.824 0 127.87 0 127.87 0S47.912.164 28.046 5.582A32.18 32.18 0 0 0 5.39 28.24c-6.009 35.298-8.34 89.084.165 122.97a32.18 32.18 0 0 0 22.656 22.657c19.866 5.418 99.822 5.418 99.822 5.418s79.955 0 99.82-5.418a32.18 32.18 0 0 0 22.657-22.657c6.338-35.348 8.291-89.1-.164-123.134"/><path fill="#fff" d="m102.421 128.06l66.328-38.418l-66.328-38.418z"/></svg></a>
+            </div>
+            <div class="section" id="best">
+                <h2>Best of the Year</h2>
+                <img id="food-img-7" src=" " alt="">
+                <h3 id="food-name-7"> </h3>
+                <a id="food-recipe-7" href="" target="_blank" >Go for Recipe</a>   <br> <br>
+                <a class="Tutorial" id="recipe-tutorial-7" href="" target="_blank"> Recipe Tutorial <svg xmlns="http://www.w3.org/2000/svg" width="14.23" height="10" viewBox="0 0 256 180"><path fill="#f00" d="M250.346 28.075A32.18 32.18 0 0 0 227.69 5.418C207.824 0 127.87 0 127.87 0S47.912.164 28.046 5.582A32.18 32.18 0 0 0 5.39 28.24c-6.009 35.298-8.34 89.084.165 122.97a32.18 32.18 0 0 0 22.656 22.657c19.866 5.418 99.822 5.418 99.822 5.418s79.955 0 99.82-5.418a32.18 32.18 0 0 0 22.657-22.657c6.338-35.348 8.291-89.1-.164-123.134"/><path fill="#fff" d="m102.421 128.06l66.328-38.418l-66.328-38.418z"/></svg></a>
             </div>
 
-         </section>
+
+
+
+
+         
+
+        </section>
 
     </main>
 
-    <footer >
-     <a href="#top"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 100 100"><path fill="#000" d="M78.016 49.132L51.961 12.714a2.52 2.52 0 0 0-2.043-1.051h-.006a2.52 2.52 0 0 0-2.048 1.059L21.977 49.14a2.51 2.51 0 0 0-.183 2.612a2.51 2.51 0 0 0 2.236 1.361h12.183l-.001 32.709a2.514 2.514 0 0 0 2.516 2.515l22.541-.001a2.515 2.515 0 0 0 2.516-2.517V53.114h12.187c.94 0 1.803-.53 2.237-1.367a2.51 2.51 0 0 0-.193-2.615"/></svg></a>
-       
-       <h4>Made By Ajeet❣️</h4>
+    <footer id="contact">
+        <a href="#top"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 100 100">
+                <path fill="#000"
+                    d="M78.016 49.132L51.961 12.714a2.52 2.52 0 0 0-2.043-1.051h-.006a2.52 2.52 0 0 0-2.048 1.059L21.977 49.14a2.51 2.51 0 0 0-.183 2.612a2.51 2.51 0 0 0 2.236 1.361h12.183l-.001 32.709a2.514 2.514 0 0 0 2.516 2.515l22.541-.001a2.515 2.515 0 0 0 2.516-2.517V53.114h12.187c.94 0 1.803-.53 2.237-1.367a2.51 2.51 0 0 0-.193-2.615" />
+            </svg></a>
+      
+           
+       <div class="footer">
+        <h4>Made By Ajeet❣️</h4>
+       </div>
+        
+
+        
     </footer>
 
     <script src="app.js"></script>
 </body>
+
 </html>

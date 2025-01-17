@@ -10,6 +10,11 @@ body{
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+/* // for hide the menun  */
+
+#menu{
+    display: none;
+}
 .theme{
     background-color: rgb(34, 34, 34);
     color: white;
@@ -79,13 +84,13 @@ main{
     justify-content: center;
     align-items: center;
     text-align: center;
-    gap: 30px;
+    gap: 20px;
 }
 
 #qute{
     font-family: "Poppins", serif;
     font-weight: 700;
-    margin: 30px;
+    margin: 10px;
 }
 
 .section h2 {
@@ -96,6 +101,7 @@ main{
 }
 .section img {
     width: 600px;
+    height: 550px;
     border-radius: 2px;
 }
 
@@ -134,9 +140,40 @@ footer h4 {
     margin-top: 10px;
     margin-left: 5px;
 }
+
+
+.load-More{
+    padding: 7px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 500;
+}
+.load-More:hover{
+    color: black;
+    background-color: rgb(148, 51, 240);
+    border-radius: 10px ;
+    border: solid rgb(148, 51, 240) 2px;
+}
+.footer{
+    display: flex;
+    justify-content: center;
+    margin-top: 90px;
+}
+.Tutorial{
+    text-decoration: none;
+    color:  rgb(148, 51, 240) ;
+    
+}
+.Tutorial :hover{
+    color:rgb(61, 9, 109) ;
+    background-color: blueviolet;
+}
+
 @media screen and (max-width: 1380px) {
     .main-section img {
         width: 80%;
+        height: 80%;
     }
     .nav-container a {
         font-size: 18px;
@@ -154,6 +191,7 @@ footer h4 {
 @media screen and (max-width: 830px) {
     .section img {
         width: 80vw;
+        height: 45vh;
     }
     .nav-container a {
         font-size: 11px;
