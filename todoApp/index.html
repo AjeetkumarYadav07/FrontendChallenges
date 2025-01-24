@@ -4,22 +4,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TodoApp</title>
     <link rel="stylesheet" href="style.css">
-    <script src="app.js" defer></script>
-    <title>Document</title>
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
-
 </head>
+<style>
+
+
+</style>
 
 <body>
+
     <h1 id="top-title"> Focus on <span>Today</span></h1>
     <main>
         <div class="container">
+
+
+            <!-- // Edit the name of Project  -->
             <div class="title2">
                 <h2>Today </h2> <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 72 72">
                     <path fill="#fcea2b"
@@ -35,49 +40,47 @@
                 </svg>
 
             </div>
-            <p id="para">Raise the bar by completing your goals</p>
-            <div class="progress-bar">
-                <div class="progress-value">  </div>
-            
-            </div>
+
             <p id="goal-note"> Please set all the 3 goals!</p>
 
-            <div class="goals-container   ">
-              
-                <div class="goal-checkbox  ">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 20 20"><path fill="#fff" d="m14.83 4.89l1.34.94l-5.81 8.38H9.02L5.78 9.67l1.34-1.25l2.57 2.4z"/></svg>
-                </div>
-                <input id="first-input" class="goal-input  " type="text" placeholder="add a new goal">
 
-            </div>
-            <div class="goals-container ">
-              
-                <div class="goal-checkbox ">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 20 20"><path fill="#fff" d="m14.83 4.89l1.34.94l-5.81 8.38H9.02L5.78 9.67l1.34-1.25l2.57 2.4z"/></svg>
+            <!-- //  Creating a custum progess bar // -->
+            <div class="progress-bar">
+                <div class="progress-value">
+                    <span> completed 4</span>
                 </div>
-                <input id="second-input" class="goal-input" type="text" placeholder="add a new goal">
-
             </div>
-            <div class="goals-container ">
-              
-                <div class="goal-checkbox ">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 20 20"><path fill="#fff" d="m14.83 4.89l1.34.94l-5.81 8.38H9.02L5.78 9.67l1.34-1.25l2.57 2.4z"/></svg>
-                </div>
-                <input  id="third-input" class="goal-input" type="text" placeholder="add a new goal">
+            <label id="progress-label">Keep going!</label>
 
+            <div class="goal-container">
+                <input  class="goal-checkbox" type="checkbox">
+                <input id="first" class="goal-input" type="text">
             </div>
-            <div class="goals-container ">
-              
-                <div class="goal-checkbox">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 20 20"><path fill="#fff" d="m14.83 4.89l1.34.94l-5.81 8.38H9.02L5.78 9.67l1.34-1.25l2.57 2.4z"/></svg>
-                </div>
-                <input id="fourth-input" class="goal-input" type="text" placeholder="add a new goal">
 
+            <div class="goal-container">
+                <input   class="goal-checkbox" type="checkbox">
+                <input id="second" class="goal-input" type="text">
             </div>
-           <h4>"Move one step ahead , today !</h4>
-          <p id="madeBy"> Made by Ajeet Kumar</p>
+
+            <div class="goal-container">
+                <input class="goal-checkbox" type="checkbox">
+                <input id="third"  class="goal-input" type="text">
+            </div>
+            <div class="goal-container">
+                <input class="goal-checkbox" type="checkbox">
+                <input id="forth"  class="goal-input" type="text">
+            </div>
+<!-- 
+            <button id="reset"> Reset Goal</button> -->
         </div>
+
+        
+
     </main>
+
+
+    <script src="app.js"> </script>
+
 </body>
 
 </html>

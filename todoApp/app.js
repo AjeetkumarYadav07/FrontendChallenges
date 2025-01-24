@@ -1,72 +1,140 @@
 const taskNote = document.querySelector("#goal-note");
-const checBoxes = document.querySelectorAll(".goal-checkbox");
-const inputField = document.querySelectorAll(".goal-input");
-const progressBar = document.querySelector(".progress-bar") ;
+const progressBar = document.querySelector(".progress-bar");
 const progressValue = document.querySelector(".progress-value");
+const progressLabel = document.querySelector("#progress-label");
+const checBoxes = document.querySelectorAll(".goal-checkbox");
+const goalInput = document.querySelectorAll(".goal-input");
+const resetButton = document.querySelector("#reset");
 
-/*  Use local storage to sotre the items */
-//    progressValue.style.visibility = "visible";
-//   function updateProgress(){
+// Add event listener to reset button
+// resetButton.addEventListener("click", () => {
+//   localStorage.clear(); // Correctly call the clear method
+//   // Reload the page
+// });
 
-//   }
 
-const storeGoals = JSON.parse(localStorage.getItem("storeGoals")) || {};
+// for storeValue in local storage 
 
-function ErorNotice() {
-  let isError = false;
 
-  inputField.forEach((filed) => {
-    if (filed.value.trim() === "") {
-      isError = true;
-    }
+ const allGaols = JSON.parse(localStorage.getItem ("allGoals")) || {}
+
+
+  // localStorage.setItem("")
+// Sample quotes based on progress
+const allQuotes = [
+  "Keep going!",
+  "Great start!",
+  "You're halfway there!",
+  "Almost done!",
+  "You did it!"
+];
+// taskNote.style.visibility = "hidden"; 
+// Function to disable all checkboxes
+function disable() {
+  checBoxes.forEach((checkbox) => {
+    checkbox.disabled = true;
+    
   });
-
-  if (isError) {
-    taskNote.style.visibility = "visible";
-    return false;
-  } else {
-    taskNote.style.visibility = "hidden";
-    return true;
-  }
 }
 
- /// to set the value on localStrage to broswe again //
+// Function to enable all checkboxes
+function enable() {
+  checBoxes.forEach((checkbox) => {
+    checkbox.disabled = false;
+   
+  });
+}
 
-inputField.forEach((filed) =>{
-    if(storeGoals[filed.id]){
-        filed.value = storeGoals[filed.id].name;
-        if(storeGoals[filed.id].completed){
-            filed.parentElement.classList.add('completed');
-        }
+// Function to update the progress
+function updateProgress() {
+  const completedGoalsCount = Array.from(checBoxes).filter((cb) => cb.checked).length;
+
+  // Update the progress bar width
+  const progressPercentage = (completedGoalsCount / checBoxes.length) * 100;
+  progressValue.style.width = `${progressPercentage}%`;
+
+  // Update the text inside the progress bar
+  progressValue.firstElementChild.innerText = `${completedGoalsCount}/${checBoxes.length} completed`;
+
+  // Update the progress label with a motivational quote
+  progressLabel.innerText = allQuotes[completedGoalsCount] || "Keep going!";
+}
+
+// Function to check if all input fields are filled
+function checkInputFields() {
+  let isError = false;
+
+  // Validate all inputs
+  goalInput.forEach((field) => {
+    if (field.value.trim() === "") {
+      isError = true;
+     
     }
-});
-
-inputField.forEach((filed) => {
-  filed.addEventListener("input", () => {
-    ErorNotice();
   });
 
-  filed.addEventListener("input", (e) => {
-    storeGoals[e.target.id] = {
-      name: filed.value,
-      completed: false,
-    };
-    localStorage.setItem("storeGoals", JSON.stringify(storeGoals));
-  });
+  // Enable or disable checkboxes based on validation
+  if (isError) {
+    disable(); // Disable checkboxes if any input is empty
+    taskNote.style.visibility = "visible"; // Show error message
+  } else {
+    enable(); // Enable checkboxes if all inputs are filled
+    taskNote.style.visibility = "hidden"; // Hide error message
+  }
 
-});
+  return isError;
+}
 
-
-    checBoxes.forEach((CheckBox) => {
-        CheckBox.addEventListener("click", (e) => {
-          if (ErorNotice()) {
-            CheckBox.parentElement.classList.add("completed");
-            progressValue.style.visibility = "visible";
-          }
-        });
-      });
-      
+// Add event listeners to input fields for real-time validation
+goalInput.forEach((input) => {
 
 
+
+  input.addEventListener("input", () => {
+    checkInputFields(); // Check fields whenever the user types
   
+  });
+
+
+
+  input.addEventListener("input", (e) =>{
+    allGaols[input.id] = {
+      name : input.value ,
+      completed : false
+    }
+    localStorage.setItem("allGoals", JSON.stringify(allGaols))
+  })
+});
+
+goalInput.forEach((field)=>{
+ field.value = allGaols[field.id].name
  
+})
+
+
+// Checkboxes click event
+checBoxes.forEach((checkbox) => {
+  checkbox.addEventListener("click", (e) => {
+    if (checkInputFields()) {
+ 
+      e.preventDefault(); 
+      // Prevent checkbox interaction if validation fails
+    } else if (checkbox.checked) {
+      checkbox.parentElement.classList.add("complete");
+     
+      
+    } else {
+      checkbox.parentElement.classList.remove("complete");
+    }
+    
+   
+     
+      progressValue.style.visibility = "visible";
+
+      updateProgress(); // Update progress after marking the checkbox
+
+  });
+});
+
+// Initialize validation and progress on page load
+checkInputFields(); 
+updateProgress(); 
